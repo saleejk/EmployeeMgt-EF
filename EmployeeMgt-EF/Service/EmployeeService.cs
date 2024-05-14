@@ -23,6 +23,7 @@ namespace EmployeeMgt_EF.Service
         }
         public void AddEmployee(Employee employee)
         {
+            employee.E_id = 0;
             dbContextClass.Employees.Add(employee);
             dbContextClass.SaveChanges();
         }
